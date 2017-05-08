@@ -19,5 +19,5 @@ from api.views import DomainChecker
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^checkdomain/', DomainChecker.as_view()),
+    url(r'^domain/checkdomain/', DomainChecker.as_view()),
 ]
