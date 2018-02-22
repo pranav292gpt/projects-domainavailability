@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from api.views import DomainChecker
+from api.views import DomainChecker, Test
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^domain/checkdomain/', DomainChecker.as_view()),
+    url(r'^domain/test/', Test.as_view()),
 ]

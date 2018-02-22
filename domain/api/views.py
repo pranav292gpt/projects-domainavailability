@@ -32,3 +32,7 @@ class DomainChecker(APIView):
             except Exception:
                 return Response({"error" : " No root WHOIS server found for domain."}, status.HTTP_400_BAD_REQUEST)
         return Response({"error" : "bad request"}, status.HTTP_400_BAD_REQUEST)
+
+class Test(APIView):
+    def get(self, render, *args, **kwargs):
+        return Response({"Hello": "World"})
