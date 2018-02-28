@@ -4,6 +4,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 import pythonwhois
+from django.http.response import HttpResponse
 
 class DomainChecker(APIView):
     def get(self, request, *args, **kwargs):
@@ -35,4 +36,8 @@ class DomainChecker(APIView):
 
 class Test(APIView):
     def get(self, render, *args, **kwargs):
+        if self.request.GET.get('hub.verify_token')
+            print self.request.GET['hub.verify_token']
+            print self.request.GET['hub.challenge']
+            return HttpResponse(self.request.GET['hub.challenge'])
         return Response({"Hello": "World"})
