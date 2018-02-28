@@ -35,8 +35,8 @@ class DomainChecker(APIView):
         return Response({"error" : "bad request"}, status.HTTP_400_BAD_REQUEST)
 
 class Test(APIView):
-    def get(self, render, *args, **kwargs):
-        if self.request.GET.get('hub.verify_token')
+    def get(self, request, *args, **kwargs):
+        if self.request.GET.get('hub.verify_token'):
             print self.request.GET['hub.verify_token']
             print self.request.GET['hub.challenge']
             return HttpResponse(self.request.GET['hub.challenge'])
