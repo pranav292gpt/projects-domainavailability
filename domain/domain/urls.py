@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^domain/checkdomain/', DomainChecker.as_view()),
     url(r'^domain/test/', Test.as_view()),
+#    url(r'^webhook', Test1.as_view()),
 ]
